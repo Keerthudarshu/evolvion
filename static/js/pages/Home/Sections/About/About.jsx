@@ -17,11 +17,11 @@ export default function About() {
         <section className={Classes.about} id='about-section' >
             <div className={Classes.container}>
                 <h2>
-                    Experienced <span> Full-Stack </span> Developers
+                    Your 360° <span> IT Solutions </span> Partner
                 </h2>
                 <p>
-                    With 200+ projects delivered, we offer fast, reliable mobile app and web <br />
-                    development and unlimited revisions to bring your vision to life
+                    With 100+ projects delivered across industries, we offer world-class web development, <br />
+                    software testing, mobile apps and AI solutions at the most competitive rates
                 </p>
             </div>
 
@@ -61,10 +61,13 @@ export default function About() {
                         <> */}
                     <img src={'/images/project.png'} alt='projects background for mobile' draggable={false} className={Classes.card_inner_img} />
                     <div className={Classes.projectsInner} >
-                        <h2>200+ Projects Launched</h2>
+                        <h2>100+ Projects Launched</h2>
                         <p>
-                            With over 200 projects delivered, we build fast and reliable web and mobile apps complete with scalable architecture and unlimited revisions.                        </p>
-                        <button onClick={() => { navigateTo('/portfolio') }}  > <h5>View our portfolio</h5> </button>
+                            From startups to enterprises — we build web apps, mobile apps, automation and integration solutions tailored to your business needs.
+                        </p>
+                        <a href="https://virtuososys.co/" target="_blank" rel="noopener noreferrer">
+                            <button> <h5>View our work</h5> </button>
+                        </a>
                     </div>
                     {/* </>
                     } */}
@@ -72,24 +75,24 @@ export default function About() {
 
                 <div className={Classes.featuresList}>
                     <div className={Classes.featureBox}>
-                        <h3>Full-Stack Development</h3>
+                        <h3>Web & Mobile Development</h3>
                         <p>
-                            We build complete solutions from design to development and AI/ML, backed by a
-                            proven track record of creating high-performing and impactful apps and websites.
+                            We build complete web applications and mobile apps using ReactJS, Node.js,
+                            Next.js, Flutter and more — crafted for performance and scalability.
                         </p>
                     </div>
                     <div className={`${Classes.featureBox}`}>
-                        <h3>Quick Delivery</h3>
+                        <h3>Software Testing & QA</h3>
                         <p>
-                            With over a decade of experience, we deliver innovative, scalable designs
-                            and apps that balance quality, speed, and customer satisfaction.
+                            Our dedicated QA teams perform quality verification across e-commerce,
+                            healthcare, media and business solutions to the highest standards.
                         </p>
                     </div>
                     <div className={Classes.featureBox}>
-                        <h3>Unlimited Revisions</h3>
+                        <h3>Competitive Pricing</h3>
                         <p>
-                            We offer unlimited revisions and dedicated support to ensure your
-                            website or app matches your vision down to every detail.
+                            Operating from India, we offer world-class development at rates that
+                            fit your budget — without compromising on code quality or delivery.
                         </p>
                     </div>
                 </div>

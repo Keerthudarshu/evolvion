@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-// import RoughText from '../../../../components/RoughText/RoughText';
 import Classes from './Faq.module.css'
 
-// Styled components using MUI's `styled` function
 const AccordionContainer = styled('div')({
     width: '100%',
     maxWidth: '800px',
@@ -63,51 +60,43 @@ const SectionE = () => {
     const handleChange = (panel) => (event, isExpanded) => {
         setExpanded(isExpanded ? panel : false);
     };
-    const navigateTo = useNavigate();
 
     const faqs = [
         {
-            question: "What services does your agency offer?",
-            answer: "We specialize in custom mobile app and web development, UI/UX, AI/ML, DevOps, AI-powered applications, interactive dashboards, SEO-optimized mobile apps and websites, SaaS applications, and AI chatbots. Our team builds high-performance digital solutions that enhance user experience and drive business growth."
+            question: "What services does Virtuososys offer?",
+            answer: "Virtuososys is a 360° IT solutions company. We offer web development, mobile app development, software testing (QA), UI/UX design, AI development, SaaS, e-commerce solutions, and technical training — all at world-class standards and highly competitive rates."
         },
         {
-            question: "Do you provide AI-powered solutions for businesses?",
-            answer: "Yes! We develop AI-driven chatbots, automation tools, recommendation engines, and AI-integrated applications that streamline operations, enhance customer engagement, and improve decision-making."
+            question: "Why should I choose Virtuososys over other agencies?",
+            answer: "We operate from India which allows us to offer highly competitive pricing without sacrificing quality. Our team uses premium code standards, works across multiple domains (healthcare, e-commerce, logistics, real estate, etc.), and customizes every project based on your specific requirements and market conditions."
         },
         {
-            question: "Do you offer ongoing support and maintenance?",
-            answer: "Yes! We provide regular updates, security patches, performance optimizations, and feature enhancements to keep your website or application running smoothly.",
+            question: "What technologies does your team use?",
+            answer: "Our team is proficient in ReactJS, Node.js, Next.js, Flutter, Java, SQL, Microsoft Azure, PgAdmin4, SOAP, and many other modern technologies, databases and web services.",
         },
         {
-            question: "Do you guys also develop mobile apps?",
-            answer: "Absolutely! In addition to web platforms, we specialize in cross-platform mobile app development for iOS and Android using modern frameworks like React Native and Flutter. Whether you need a standalone mobile experience or an app that integrates seamlessly with your web platform, we deliver fast, scalable, and user-friendly solutions."
+            question: "Do you offer software testing and QA services?",
+            answer: "Absolutely! Our dedicated QA teams perform quality verification of software products for different market segments including e-commerce, healthcare, media and entertainment, travel and accommodation, and business solutions. We conduct a wide range of testing to ensure your product is flawless."
         },
         {
-            question: "Do you integrate third-party APIs and tools?",
-            answer: "Yes! We can integrate payment gateways, CRM systems, AI models, data analytics tools, and other third-party APIs to enhance your website’s functionality."
+            question: "Do you provide technical training?",
+            answer: "Yes! We offer technical training programs including software QA testing. QA testing is easy to learn and not very code-intensive, typically taking six to ten weeks. Web development training typically takes 12-26 weeks. Our training is hands-on and practical."
         },
         {
             question: "How can I get started with my project?",
             answer: (
                 <>
-                    You can submit your basic project requirements through{" "}
-                    <button
-                        type="button"
-                        onClick={() => navigateTo("/contact-us")}
-                        className={Classes.linkLike}
-                    >
-                        contact us
-                    </button>{" "}
-                    or set up a free{" "}
+                    Visit our website at{" "}
                     <a
-                        href="https://cal.com/evolvion/30min"
+                        href="https://virtuososys.co/"
                         target="_blank"
                         rel="noreferrer"
+                        style={{ color: '#a365ff' }}
                     >
-                        30-minute meeting
+                        virtuososys.co
                     </a>{" "}
-                    to discuss your project in detail. We’ll go over your needs, suggest the
-                    best solutions, and provide a customized proposal.
+                    or reach out to us directly to discuss your requirements. We will customize a
+                    solution specifically designed to boost your business and customer reach.
                 </>
             ),
         }

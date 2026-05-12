@@ -28,7 +28,7 @@ export default function AvatarsGroup() {
                     </div>
                 ))}
             </div>
-            <p className={Classes.avatarText}>Trusted by hundreds of entrepreneurs</p>
+            <p className={Classes.avatarText}>Trusted by 100+ businesses worldwide</p>
         </div>
     )
 }

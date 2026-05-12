@@ -10,58 +10,58 @@ export default function Reviews() {
     // Example review data
     const reviewsData = [
         {
-            name: "Jake Marine",
-            company: "Founder at Anchorize",
+            name: "SSP Technologies",
+            company: "CCTV & Security Systems",
             avatar: "/images/jake.webp",
             bg: "/images/reviewbg2.png",
             review:
                 <div>
-                    I wanted to thank Evolvion.io for all of the amazing work your team did in such a short amount of time.
-                    The attention to detail, UI/UX...<a href="https://www.linkedin.com/feed/update/urn:li:activity:7336785375874469889" target="_blank" rel="noreferrer" style={{ color: '#a365ff' }} >View More</a>
+                    Virtuososys delivered our security systems website with exceptional attention to detail.
+                    The team understood our industry perfectly and built a platform that truly represents our brand.
                 </div>
         },
         {
-            name: "McClain Strelow",
-            company: "CEO at FuelClubs",
+            name: "Hello Colours",
+            company: "Painting Agency",
             avatar: "/images/mcclain.webp",
             bg: "/images/reviewbg3.png",
             review:
                 <div>
-                    Evolvion did an incredible job building my FuelClubs app. They listened to every idea, offered
-                    thoughtful recommendations...<a href="https://www.linkedin.com/feed/update/urn:li:activity:7396245250484183040/" target="_blank" rel="noreferrer" style={{ color: '#a365ff' }} >View More</a>
+                    The team at Virtuososys built our painting agency website beautifully. They were responsive,
+                    creative, and delivered exactly what we envisioned — on time and within budget.
                 </div>,
         },
         {
-            name: "Ari Rosen",
-            company: "CEO at Mentr",
+            name: "Moira Building",
+            company: "Hospital Website",
             avatar: "/images/ari.png",
             bg: "/images/reviewbg3.png",
             review:
                 <div>
-                    Working with Evolvion has been an incredible experience. They were responsive, detail-oriented,
-                    and professional from start to...<a href="https://www.linkedin.com/feed/update/urn:li:activity:7390036306468237313/" target="_blank" rel="noreferrer" style={{ color: '#a365ff' }} >View More</a>
+                    Working with Virtuososys for our hospital website has been outstanding. Professional team,
+                    premium code quality, and a smooth delivery process from start to finish.
                 </div>,
         },
         {
-            name: "Dimitris Karras",
-            company: "CEO at LightTrack",
+            name: "Lovely Cocada",
+            company: "UPVC Product Manufacturing",
             avatar: "/images/dimitris.webp",
             bg: "/images/reviewbg3.png",
             review:
                 <div>
-                    Working with Evolvion has been exceptional from start to finish. They offered an unbeatable quote,
-                    provided full support...<a href="https://www.linkedin.com/feed/update/urn:li:activity:7396204674724417536/" target="_blank" rel="noreferrer" style={{ color: '#a365ff' }} >View More</a>
+                    Virtuososys built us a world-class product website at very competitive rates. Operating from
+                    India, they brought global quality standards to our project with great results.
                 </div>,
         },
         {
-            name: "Parker Newman",
-            company: "CEO at SignWell",
+            name: "Evolt Training",
+            company: "Multi Fitness Academy & Gym",
             avatar: "/images/parker.jpg",
             bg: "/images/reviewbg3.png",
             review:
                 <div>
-                    Evolvion.io has gone above and beyond our expectations and delivered a <span style={{ whiteSpace: "nowrap" }}> first class </span>
-                    product at a fraction of the price...<a href="https://www.linkedin.com/feed/update/urn:li:activity:7366477912671166464/" target="_blank" rel="noreferrer" style={{ color: '#a365ff' }} >View More</a>
+                    Our fitness academy website exceeded all expectations. The Virtuososys team customized
+                    every feature for our specific needs and delivered a fast, beautiful, scalable platform.
                 </div>,
         },
     ];
@@ -104,10 +104,10 @@ export default function Reviews() {
         <section className={Classes.hero} id="reviews-section" >
             <div className={Classes.container}>
                 <h2>
-                    What Some of <span> Our Clients </span> Say
+                    What Our <span> Happy Clients </span> Say
                 </h2>
                 <p>
-                    With hundreds of web and mobile projects completed, we deliver proven, high-quality solutions for clients across every industry
+                    Our contented customers, who have experienced our exceptional quality and impeccable service, are a constant source of pride and motivation
                 </p>
 
                 {/* Carousel area */}

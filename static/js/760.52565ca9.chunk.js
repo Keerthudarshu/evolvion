@@ -40,7 +40,7 @@
                         showBorder: !1,
                         className: "custom-class",
                         children: (0, a.jsxs)("h1", {
-                            children: ["We Build Scalable ", (0, a.jsx)("br", {}), " Software for Startups"]
+                            children: ["We Build Products That ", (0, a.jsx)("br", {}), " Users Like"]
                         })
                     })
                 })
@@ -69,7 +69,7 @@
                     const e = () => t(window.innerWidth);
                     return window.addEventListener("resize", e), () => window.removeEventListener("resize", e)
                 }), []);
-                const n = e < 400 ? "Leading full-stack developers specializing \n in custom website and mobile app solutions" : "Leading full-stack developers specializing in custom \n website and mobile app solutions";
+                const n = e < 400 ? "360° IT solutions — web development, software \n testing, mobile apps & AI at affordable rates" : "360° IT solutions — web development, software testing, \n mobile apps & AI at the most affordable rates";
                 return (0, a.jsx)(a.Fragment, {
                     children: (0, a.jsx)(c, {
                         text: n,
@@ -85,7 +85,7 @@
 
             function u() {
                 return (0, a.jsx)("a", {
-                    href: "https://cal.com/evolvion/30min",
+                    href: "https://virtuososys.co/",
                     target: "_blank",
                     rel: "noopener noreferrer",
                     children: (0, a.jsxs)(h.P.div, {
@@ -96,10 +96,10 @@
                         children: [(0, a.jsxs)("button", {
                             type: "button",
                             children: [" ", (0, a.jsx)("h5", {
-                                children: "Only 2 spots left this month"
+                                children: "Affordable & World-Class Quality"
                             }), " "]
                         }), (0, a.jsxs)("h5", {
-                            children: ["Book an intro call ", ">"]
+                            children: ["Visit our website ", ">"]
                         })]
                     })
                 })
@@ -140,7 +140,7 @@
                         }, e.src)))
                     }), (0, a.jsx)("p", {
                         className: o.avatarText,
-                        children: "Trusted by hundreds of entrepreneurs"
+                        children: "Trusted by 100+ businesses worldwide"
                     })]
                 })
             }
@@ -159,42 +159,42 @@
             const j = [{
                     id: 1,
                     src: "/projects/1.webp",
-                    href: "https://www.evolvion.io/portfolio/supertip",
+                    href: "https://virtuososys.co/",
                     alt: "Project 1"
                 }, {
                     id: 2,
                     src: "/projects/2.webp",
-                    href: "https://www.evolvion.io/portfolio/fuel-clubs",
+                    href: "https://virtuososys.co/",
                     alt: "Project 2"
                 }, {
                     id: 3,
                     src: "/projects/3.webp",
-                    href: "https://www.evolvion.io/portfolio/mentr",
+                    href: "https://virtuososys.co/",
                     alt: "Project 3"
                 }, {
                     id: 4,
                     src: "/projects/4.webp",
-                    href: "https://www.evolvion.io/portfolio/light-track",
+                    href: "https://virtuososys.co/",
                     alt: "Project 4"
                 }, {
                     id: 5,
                     src: "/projects/5.webp",
-                    href: "https://www.evolvion.io/portfolio/privacybot",
+                    href: "https://virtuososys.co/",
                     alt: "Project 5"
                 }, {
                     id: 6,
                     src: "/projects/6.webp",
-                    href: "https://www.evolvion.io/portfolio/anchorize",
+                    href: "https://virtuososys.co/",
                     alt: "Project 6"
                 }, {
                     id: 7,
                     src: "/projects/7.webp",
-                    href: "https://www.evolvion.io/portfolio/evala",
+                    href: "https://virtuososys.co/",
                     alt: "Project 7"
                 }, {
                     id: 8,
                     src: "/projects/8.webp",
-                    href: "https://www.evolvion.io/portfolio/pitchperfecter",
+                    href: "https://virtuososys.co/",
                     alt: "Project 8"
                 }],
                 b = [...j, ...j];
@@ -296,10 +296,10 @@
                                             e("/portfolio")
                                         },
                                         children: [" ", (0, a.jsx)("h5", {
-                                            children: "View our portfolio"
+                                            children: "Visit our website"
                                         }), " "]
                                     }), (0, a.jsx)("a", {
-                                        href: "https://cal.com/evolvion/30min",
+                                        href: "https://virtuososys.co/",
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         children: (0, a.jsxs)("button", {
@@ -355,7 +355,7 @@
                                 children: " Full-Stack "
                             }), " Developers"]
                         }), (0, a.jsxs)("p", {
-                            children: ["With 200+ projects delivered, we offer fast, reliable mobile app and web ", (0, a.jsx)("br", {}), "development and unlimited revisions to bring your vision to life"]
+                            children: ["With 100+ projects delivered across industries, we offer world-class web development, ", (0, a.jsx)("br", {}), "software testing, mobile apps and AI solutions at the most competitive rates"]
                         })]
                     }), (0, a.jsxs)("div", {
                         className: k.featuresSection,
@@ -369,15 +369,15 @@
                             }), (0, a.jsxs)("div", {
                                 className: k.projectsInner,
                                 children: [(0, a.jsx)("h2", {
-                                    children: "200+ Projects Launched"
+                                    children: "100+ Projects Launched"
                                 }), (0, a.jsx)("p", {
-                                    children: "With over 200 projects delivered, we build fast and reliable web and mobile apps complete with scalable architecture and unlimited revisions.                        "
+                                    children: "From startups to enterprises — we build web apps, mobile apps, automation and integration solutions tailored to your business needs.                        "
                                 }), (0, a.jsxs)("button", {
                                     onClick: () => {
                                         e("/portfolio")
                                     },
                                     children: [" ", (0, a.jsx)("h5", {
-                                        children: "View our portfolio"
+                                        children: "Visit our website"
                                     }), " "]
                                 })]
                             })]
@@ -386,23 +386,23 @@
                             children: [(0, a.jsxs)("div", {
                                 className: k.featureBox,
                                 children: [(0, a.jsx)("h3", {
-                                    children: "Full-Stack Development"
+                                    children: "Web & Mobile Development"
                                 }), (0, a.jsx)("p", {
-                                    children: "We build complete solutions from design to development and AI/ML, backed by a proven track record of creating high-performing and impactful apps and websites."
+                                    children: "We build complete web applications and mobile apps using ReactJS, Node.js, Next.js, Flutter and more — crafted for performance and scalability."
                                 })]
                             }), (0, a.jsxs)("div", {
                                 className: "".concat(k.featureBox),
                                 children: [(0, a.jsx)("h3", {
-                                    children: "Quick Delivery"
+                                    children: "Software Testing & QA"
                                 }), (0, a.jsx)("p", {
-                                    children: "With over a decade of experience, we deliver innovative, scalable designs and apps that balance quality, speed, and customer satisfaction."
+                                    children: "Our dedicated QA teams perform quality verification across e-commerce, healthcare, media and business solutions to the highest standards."
                                 })]
                             }), (0, a.jsxs)("div", {
                                 className: k.featureBox,
                                 children: [(0, a.jsx)("h3", {
-                                    children: "Unlimited Revisions"
+                                    children: "Competitive Pricing"
                                 }), (0, a.jsx)("p", {
-                                    children: "We offer unlimited revisions and dedicated support to ensure your website or app matches your vision down to every detail."
+                                    children: "Operating from India, we offer world-class development at rates that fit your budget — without compromising on code quality or delivery."
                                 })]
                             })]
                         })]
@@ -444,13 +444,13 @@
 
             function S() {
                 const e = [{
-                    name: "Jake Marine",
-                    company: "Founder at Anchorize",
+                    name: "SSP Technologies",
+                    company: "CCTV & Security Systems",
                     avatar: "/images/jake.webp",
                     bg: "/images/reviewbg2.png",
                     review: (0, a.jsxs)("div", {
-                        children: ["I wanted to thank Evolvion.io for all of the amazing work your team did in such a short amount of time. The attention to detail, UI/UX...", (0, a.jsx)("a", {
-                            href: "https://www.linkedin.com/feed/update/urn:li:activity:7336785375874469889",
+                        children: ["Virtuososys delivered our security systems website with exceptional attention to detail. The team understood our industry perfectly and built a platform that truly represents our brand.", (0, a.jsx)("a", {
+                            href: "https://virtuososys.co/",
                             target: "_blank",
                             rel: "noreferrer",
                             style: {
@@ -460,13 +460,13 @@
                         })]
                     })
                 }, {
-                    name: "McClain Strelow",
-                    company: "CEO at FuelClubs",
+                    name: "Hello Colours",
+                    company: "Painting Agency",
                     avatar: "/images/mcclain.webp",
                     bg: "/images/reviewbg3.png",
                     review: (0, a.jsxs)("div", {
-                        children: ["Evolvion did an incredible job building my FuelClubs app. They listened to every idea, offered thoughtful recommendations...", (0, a.jsx)("a", {
-                            href: "https://www.linkedin.com/feed/update/urn:li:activity:7396245250484183040/",
+                        children: ["The team at Virtuososys built our painting agency website beautifully. They were responsive, creative, and delivered exactly what we envisioned.", (0, a.jsx)("a", {
+                            href: "https://virtuososys.co/",
                             target: "_blank",
                             rel: "noreferrer",
                             style: {
@@ -476,13 +476,13 @@
                         })]
                     })
                 }, {
-                    name: "Ari Rosen",
-                    company: "CEO at Mentr",
+                    name: "Moira Building",
+                    company: "Hospital Website",
                     avatar: "/images/ari.png",
                     bg: "/images/reviewbg3.png",
                     review: (0, a.jsxs)("div", {
-                        children: ["Working with Evolvion has been an incredible experience. They were responsive, detail-oriented, and professional from start to...", (0, a.jsx)("a", {
-                            href: "https://www.linkedin.com/feed/update/urn:li:activity:7390036306468237313/",
+                        children: ["Working with Virtuososys for our hospital website has been outstanding. Professional team, premium code quality, and a smooth delivery process.", (0, a.jsx)("a", {
+                            href: "https://virtuososys.co/",
                             target: "_blank",
                             rel: "noreferrer",
                             style: {
@@ -492,13 +492,13 @@
                         })]
                     })
                 }, {
-                    name: "Dimitris Karras",
-                    company: "CEO at LightTrack",
+                    name: "Lovely Cocada",
+                    company: "UPVC Product Manufacturing",
                     avatar: "/images/dimitris.webp",
                     bg: "/images/reviewbg3.png",
                     review: (0, a.jsxs)("div", {
-                        children: ["Working with Evolvion has been exceptional from start to finish. They offered an unbeatable quote, provided full support...", (0, a.jsx)("a", {
-                            href: "https://www.linkedin.com/feed/update/urn:li:activity:7396204674724417536/",
+                        children: ["Virtuososys built us a world-class product website at very competitive rates. Operating from India, they brought global quality standards.", (0, a.jsx)("a", {
+                            href: "https://virtuososys.co/",
                             target: "_blank",
                             rel: "noreferrer",
                             style: {
@@ -508,18 +508,18 @@
                         })]
                     })
                 }, {
-                    name: "Parker Newman",
-                    company: "CEO at SignWell",
+                    name: "Evolt Training",
+                    company: "Multi Fitness Academy & Gym",
                     avatar: "/images/parker.jpg",
                     bg: "/images/reviewbg3.png",
                     review: (0, a.jsxs)("div", {
-                        children: ["Evolvion.io has gone above and beyond our expectations and delivered a ", (0, a.jsx)("span", {
+                        children: ["Our fitness academy website exceeded all expectations. The Virtuososys team customized every feature for our specific needs. ", (0, a.jsx)("span", {
                             style: {
                                 whiteSpace: "nowrap"
                             },
                             children: " first class "
                         }), "product at a fraction of the price...", (0, a.jsx)("a", {
-                            href: "https://www.linkedin.com/feed/update/urn:li:activity:7366477912671166464/",
+                            href: "https://virtuososys.co/",
                             target: "_blank",
                             rel: "noreferrer",
                             style: {
@@ -545,11 +545,11 @@
                     children: (0, a.jsxs)("div", {
                         className: N.container,
                         children: [(0, a.jsxs)("h2", {
-                            children: ["What Some of ", (0, a.jsx)("span", {
+                            children: ["What Our ", (0, a.jsx)("span", {
                                 children: " Our Clients "
                             }), " Say"]
                         }), (0, a.jsx)("p", {
-                            children: "With hundreds of web and mobile projects completed, we deliver proven, high-quality solutions for clients across every industry"
+                            children: "Our contented customers, who have experienced our exceptional quality and impeccable service, are a constant source of pride and motivation"
                         }), (0, a.jsx)("div", {
                             className: N.carousel,
                             children: (0, a.jsx)(C.N, {
@@ -686,7 +686,7 @@
             };
 
             function B() {
-                const e = ["UI/UX Design", "Front-End Development", "Back-End Development", "AI/ML Development", "Mobile Apps", "Custom Applications", "UI/UX Design", "Front-End Development", "Back-End Development", "AI/ML Development", "Mobile Apps", "Custom Applications", "UI/UX Design", "Front-End Development", "Back-End Development", "AI/ML Development", "Mobile Apps", "Custom Applications", "UI/UX Design", "Front-End Development", "Back-End Development", "AI/ML Development", "Mobile Apps", "Custom Applications", "UI/UX Design", "Front-End Development", "Back-End Development", "AI/ML Development", "Mobile Apps", "Custom Applications", "UI/UX Design", "Front-End Development", "Back-End Development", "AI/ML Development", "Mobile Apps", "Custom Applications", "UI/UX Design", "Front-End Development", "Back-End Development", "AI/ML Development", "Mobile Apps", "Custom Applications"],
+                const e = ["Web Development", "Software Testing (QA)", "Mobile App Development", "Technical Training", "AI Development", "E-commerce Solutions", "Web Development", "Software Testing (QA)", "Mobile App Development", "Technical Training", "AI Development", "E-commerce Solutions", "Web Development", "Software Testing (QA)", "Mobile App Development", "Technical Training", "AI Development", "E-commerce Solutions", "Web Development", "Software Testing (QA)", "Mobile App Development", "Technical Training", "AI Development", "E-commerce Solutions", "Web Development", "Software Testing (QA)", "Mobile App Development", "Technical Training", "AI Development", "E-commerce Solutions", "Web Development", "Software Testing (QA)", "Mobile App Development", "Technical Training", "AI Development", "E-commerce Solutions", "Web Development", "Software Testing (QA)", "Mobile App Development", "Technical Training", "AI Development", "E-commerce Solutions"],
                     t = [...e, ...e],
                     n = 40 * e.length;
                 return (0, a.jsx)("div", {
@@ -721,7 +721,7 @@
                                 children: " Website & Mobile App "
                             }), " Development"]
                         }), (0, a.jsxs)("p", {
-                            children: ["We specialize in UI/UX design, front-end and back-end development, ", (0, a.jsx)("br", {}), " and cutting-edge AI/ML solutions"]
+                            children: ["From web development and software testing to mobile apps, AI development and technical training — we do it all"]
                         })]
                     }), (0, a.jsx)("div", {
                         className: q.slider,
@@ -790,19 +790,19 @@
                 }),
                 O = () => {
                     const [e, t] = (0, i.useState)("panel1"), n = (0, m.Zp)(), r = [{
-                        question: "What services does your agency offer?",
-                        answer: "We specialize in custom mobile app and web development, UI/UX, AI/ML, DevOps, AI-powered applications, interactive dashboards, SEO-optimized mobile apps and websites, SaaS applications, and AI chatbots. Our team builds high-performance digital solutions that enhance user experience and drive business growth."
+                        question: "What services does Virtuososys offer??",
+                        answer: "Virtuososys is a 360 IT solutions company. We offer web development, mobile app development, software testing (QA), UI/UX design, AI development, SaaS, e-commerce solutions, and technical training at world-class standards and competitive rates."
                     }, {
-                        question: "Do you provide AI-powered solutions for businesses?",
+                        question: "Why should I choose Virtuososys over other agencies??",
                         answer: "Yes! We develop AI-driven chatbots, automation tools, recommendation engines, and AI-integrated applications that streamline operations, enhance customer engagement, and improve decision-making."
                     }, {
-                        question: "Do you offer ongoing support and maintenance?",
+                        question: "What technologies does your team use??",
                         answer: "Yes! We provide regular updates, security patches, performance optimizations, and feature enhancements to keep your website or application running smoothly."
                     }, {
-                        question: "Do you guys also develop mobile apps?",
+                        question: "Do you offer software testing and QA services??",
                         answer: "Absolutely! In addition to web platforms, we specialize in cross-platform mobile app development for iOS and Android using modern frameworks like React Native and Flutter. Whether you need a standalone mobile experience or an app that integrates seamlessly with your web platform, we deliver fast, scalable, and user-friendly solutions."
                     }, {
-                        question: "Do you integrate third-party APIs and tools?",
+                        question: "Do you provide technical training??",
                         answer: "Yes! We can integrate payment gateways, CRM systems, AI models, data analytics tools, and other third-party APIs to enhance your website\u2019s functionality."
                     }, {
                         question: "How can I get started with my project?",
@@ -813,7 +813,7 @@
                                 className: M.linkLike,
                                 children: "contact us"
                             }), " ", "or set up a free", " ", (0, a.jsx)("a", {
-                                href: "https://cal.com/evolvion/30min",
+                                href: "https://virtuososys.co/",
                                 target: "_blank",
                                 rel: "noreferrer",
                                 children: "30-minute meeting"
@@ -910,7 +910,7 @@
                             content: "Leading full-stack developers specializing custom website and mobile app solutions."
                         }), (0, a.jsx)("meta", {
                             name: "keywords",
-                            content: "Website Agency, Website Development Agency, Web Development, full stack, AI development, UI/UX Design, SEO Services, SaaS, Frontend Developer, AI chatbots, modern website"
+                            content: "Website Agency, Website Development Agency, Web Development, full stack, AI development, Web Development, SEO Services, SaaS, Frontend Developer, AI chatbots, modern website"
                         }), (0, a.jsx)("meta", {
                             name: "robots",
                             content: "index, follow"

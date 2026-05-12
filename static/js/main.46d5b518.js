@@ -15173,13 +15173,13 @@
                     className: "logo",
                     children: [(0, f.jsx)("img", {
                         src: "/logo.png",
-                        alt: "evolvion logo"
+                        alt: "virtuososys logo"
                     }), (!n || t) && (0, f.jsx)(c.A, {
                         colors: ["#7e27ff", "#d0a0fc", "#7e27ff", "#d0a0fc", "#7e27ff"],
                         animationSpeed: 10,
                         showBorder: !1,
                         className: "custom-class",
-                        children: "EVOLVION"
+                        children: "VIRTUOSOSYS"
                     })]
                 })
             })
@@ -15357,7 +15357,7 @@
                             children: [(0, f.jsx)("p", {
                                 children: "Bring your website or mobile app to life"
                             }), (0, f.jsx)("a", {
-                                href: "https://cal.com/evolvion/30min",
+                                href: "https://virtuososys.co/",
                                 target: "_blank",
                                 rel: "noopener noreferrer",
                                 children: (0, f.jsxs)("button", {
@@ -15439,10 +15439,10 @@
                     className: S,
                     children: [(0, f.jsx)("span", {
                         children: (0, f.jsx)("h5", {
-                            children: "\xa9 2026 Evolvion. All rights reserved."
+                            children: "\xa9 2026 Virtuososys. All rights reserved."
                         })
                     }), (0, f.jsx)("a", {
-                        href: "https://www.linkedin.com/company/evolvionio",
+                        href: "https://www.virtuososys.co/",
                         target: "_blank",
                         rel: "noopener noreferrer",
                         className: E,

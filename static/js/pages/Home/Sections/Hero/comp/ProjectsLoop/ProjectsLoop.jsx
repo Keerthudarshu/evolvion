@@ -7,14 +7,14 @@ import "swiper/css";
 
 // Images are in 3:4 ratio for best fit
 const projects = [
-    { id: 1, src: "/projects/1.webp", href: "https://www.evolvion.io/portfolio/supertip", alt: "Project 1" },
-    { id: 2, src: "/projects/2.webp", href: "https://www.evolvion.io/portfolio/fuel-clubs", alt: "Project 2" },
-    { id: 3, src: "/projects/3.webp", href: "https://www.evolvion.io/portfolio/mentr", alt: "Project 3" },
-    { id: 4, src: "/projects/4.webp", href: "https://www.evolvion.io/portfolio/light-track", alt: "Project 4" },
-    { id: 5, src: "/projects/5.webp", href: "https://www.evolvion.io/portfolio/privacybot", alt: "Project 5" },
-    { id: 6, src: "/projects/6.webp", href: "https://www.evolvion.io/portfolio/anchorize", alt: "Project 6" },
-    { id: 7, src: "/projects/7.webp", href: "https://www.evolvion.io/portfolio/evala", alt: "Project 7" },
-    { id: 8, src: "/projects/8.webp", href: "https://www.evolvion.io/portfolio/pitchperfecter", alt: "Project 8" },
+    { id: 1, src: "/projects/1.webp", href: "https://virtuososys.co/", alt: "E-commerce Project" },
+    { id: 2, src: "/projects/2.webp", href: "https://virtuososys.co/", alt: "Healthcare Project" },
+    { id: 3, src: "/projects/3.webp", href: "https://virtuososys.co/", alt: "E-Learning Project" },
+    { id: 4, src: "/projects/4.webp", href: "https://virtuososys.co/", alt: "Real Estate Project" },
+    { id: 5, src: "/projects/5.webp", href: "https://virtuososys.co/", alt: "Restaurant Project" },
+    { id: 6, src: "/projects/6.webp", href: "https://virtuososys.co/", alt: "Social Media Project" },
+    { id: 7, src: "/projects/7.webp", href: "https://virtuososys.co/", alt: "Logistics Project" },
+    { id: 8, src: "/projects/8.webp", href: "https://virtuososys.co/", alt: "Gaming Project" },
 ];
 
 // Duplicate to make the loop visually denser (like your old JS marquee)

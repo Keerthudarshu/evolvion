@@ -9,8 +9,7 @@ export default function Logo({ alwaysShowText = false }) {
     return (
         <>
             <div className='logo' >
-                <img src='/logo.png' alt='evolvion logo' />
-                {/* <h3>EVOLVION</h3> */}
+                <img src='/logo.png' alt='virtuososys logo' />
                 {(!isMobile || alwaysShowText) &&
                     <GradientText
                         colors={["#7e27ff", "#d0a0fc", "#7e27ff", "#d0a0fc", "#7e27ff"]}
@@ -18,7 +17,7 @@ export default function Logo({ alwaysShowText = false }) {
                         showBorder={false}
                         className="custom-class"
                     >
-                        EVOLVION
+                        VIRTUOSOSYS
                     </GradientText>
                 }
             </div>

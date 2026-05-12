@@ -10,10 +10,10 @@ export default function Services() {
         <section className={Classes.service} id='services-section' >
             <div className={Classes.container}>
                 <h2>
-                    Complete <span> Website & Mobile App </span> Development
+                    Complete <span> IT Services </span> Under One Roof
                 </h2>
                 <p>
-                    We specialize in UI/UX design, front-end and back-end development, <br /> and cutting-edge AI/ML solutions
+                    From web development and software testing to mobile apps, <br /> AI development and technical training — we do it all
                 </p>
             </div>
 

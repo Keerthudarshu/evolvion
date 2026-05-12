@@ -14,8 +14,8 @@ export default function SubHeading() {
     }, []);
 
     const text = windowWidth < 400 ?
-        `Leading full-stack developers specializing \n in custom website and mobile app solutions`
-        : `Leading full-stack developers specializing in custom \n website and mobile app solutions`
+        `360° IT solutions — web development, software \n testing, mobile apps & AI at affordable rates`
+        : `360° IT solutions — web development, software testing, \n mobile apps & AI at the most affordable rates`
 
     return (
         <>

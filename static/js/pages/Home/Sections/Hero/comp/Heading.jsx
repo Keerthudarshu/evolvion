@@ -27,8 +27,7 @@ export default function Heading() {
                 className="custom-class"
             >
                 <h1>
-                    {/* Your Websites & Apps <br /> Brought to Life */}
-                    We Build Scalable <br /> Software for Startups
+                    We Build Products That <br /> Users Like
                 </h1>
             </GradientText>
         </div >

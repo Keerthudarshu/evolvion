@@ -26,13 +26,13 @@ export default function Footer() {
                         <Logo alwaysShowText={true} />
                     </a>
                     <div className={Classes.ctaCard}>
-                        <p>Bring your website or mobile app to life</p>
+                        <p>Your 360° IT solutions partner — affordable & world-class</p>
                         <a
-                            href="https://cal.com/evolvion/30min"
+                            href="https://virtuososys.co/"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <button> <h5>Book a call</h5> </button>
+                            <button> <h5>Visit our website</h5> </button>
                         </a>
                     </div>
                 </div>
@@ -68,10 +68,9 @@ export default function Footer() {
 
             {/* Bottom bar: copyright + social */}
             <div className={Classes.bottomBar}>
-                <span><h5>© 2026 Evolvion. All rights reserved.</h5></span>
-                {/* Example LinkedIn icon or any social link */}
+                <span><h5>© 2026 Virtuososys. All rights reserved.</h5></span>
                 <a
-                    href="https://www.linkedin.com/company/evolvionio"
+                    href="https://virtuososys.co/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={Classes.socialLink}
