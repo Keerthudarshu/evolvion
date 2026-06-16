@@ -7,57 +7,46 @@ import useScreenWidth from '../../Hooks/useScreenWidth';
 import { scrollToElement } from '../../utils/scrollToElement';
 
 export default function Navbar() {
-    // Track scroll state
     const [scrolled, setScrolled] = useState(false || window.innerWidth < 480);
-    // Track the current window width
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [menuOpen, setMenuOpen] = useState(false);
 
-    // Update scroll state based on window.scrollY
     useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
-        };
+        const handleScroll = () => setScrolled(window.scrollY > 50);
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Update windowWidth on resize
     useEffect(() => {
         const handleResize = () => setWindowWidth(window.innerWidth);
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
+    useEffect(() => {
+        if (!menuOpen) return;
+
+        const previousOverflow = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+
+        return () => {
+            document.body.style.overflow = previousOverflow;
+        };
+    }, [menuOpen]);
+
     const navigateTo = useNavigate();
     const location = useLocation();
-    const [activePage, setActivePage] = useState(location.pathname);
+    const [activePage] = useState(location.pathname);
 
-    useEffect(() => {
-        setActivePage(location.pathname);
-    }, [location.pathname]);
-
-    const handleNavigate = (page) => {
-        navigateTo(page);
-    };
-
-    // This function returns a margin value based on window width and scroll state.
     const getMargin = () => {
-        // You can adjust these breakpoints and margin values as needed.
-        if (windowWidth < 700) {
-            // For devices with width less than 1000px:
-            return scrolled ? '10px 5%' : '10px 5%';
-        } else if (windowWidth < 1000) {
-            return scrolled ? '10px 12%' : '10px 5%';
-        } else if (windowWidth < 1200) {
-            // For devices with width between 1000px and 1200px:
-            return scrolled ? '10px 20%' : '10px 5%';
-        } else {
-            // For devices with width 1200px and above:
-            return scrolled ? '10px 25%' : '10px 7%';
-        }
+        if (windowWidth < 700) return scrolled ? '10px 5%' : '10px 5%';
+        else if (windowWidth < 1000) return scrolled ? '10px 12%' : '10px 5%';
+        else if (windowWidth < 1200) return scrolled ? '10px 20%' : '10px 5%';
+        else return scrolled ? '10px 25%' : '10px 7%';
     };
 
     const isMobile = useScreenWidth() < 480;
+    const isCompactNav = windowWidth <= 900;
 
     const handleScrollOrNavigate = (id, offset = 0) => {
         if (location.pathname !== '/') {
@@ -65,6 +54,18 @@ export default function Navbar() {
         } else {
             scrollToElement(id, offset);
         }
+        setMenuOpen(false);
+    };
+
+    const handleHomeClick = () => {
+        setMenuOpen(false);
+    };
+
+    const handleHomeRoute = () => {
+        if (location.pathname !== '/') {
+            navigateTo('/');
+        }
+        setMenuOpen(false);
     };
 
     return (
@@ -81,71 +82,87 @@ export default function Navbar() {
                 boxShadow: isMobile || scrolled
                     ? 'rgba(255, 255, 255, 0.2) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.16) 0px 2px 8px 0px'
                     : 'none',
-                transform: 'none',
-                transformOrigin: '50% 50% 0px',
             }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
         >
-            <div className={Classes.gridLeft} >
-                <a href="/" >
+            <div className={Classes.gridLeft}>
+                <a href="/">
                     <motion.div
-                        animate={{ height: isMobile || scrolled ? '2rem' : '2.2rem' }}
+                        animate={{ height: isMobile || scrolled ? '3.2rem' : '4rem' }}
                         transition={{ duration: 0.3 }}
+                        className={Classes.logoSlot}
                     >
                         <Logo />
                     </motion.div>
                 </a>
             </div>
-            <ul>
-                <li
-                    className={activePage === '/' ? Classes.navActive : ''}
-                >
-                    <a href="/">
-                        <h5>Home</h5>
-                    </a>
-                </li>
-                <li
-                    onClick={() => handleScrollOrNavigate('about-section', -120)}
-                    style={{ display: windowWidth < 600 ? 'none' : '' }}
-                >
-                    <h5>About Us</h5>
-                </li>
-                <li
-                    onClick={() => handleScrollOrNavigate('services-section', -30)}
-                    style={{ display: windowWidth < 400 ? 'none' : '' }}
-                >
-                    <h5>Services</h5>
-                </li>
-                <li
-                    onClick={() => handleScrollOrNavigate('faq-section', 0)}
-                    style={{ display: windowWidth < 600 ? 'none' : '' }}
-                >
-                    <h5>FAQ</h5>
-                </li>
-                <li
-                    onClick={() => handleNavigate('/portfolio')}
-                    className={activePage === '/portfolio' ? Classes.navActive : ''}
-                >
-                    <h5>Portfolio</h5>
-                </li>
-                {/* <li
-                    onClick={() => handleNavigate('/contact-us')}
-                    className={activePage === '/contact-us' ? Classes.navActive : ''}
-                >
-                    <h5> {isMobile ? 'Contact' : 'Your Project Details'} </h5>
-                </li> */}
-            </ul>
+            {!isCompactNav && (
+                <ul className={Classes.navLinks}>
+                    <li className={activePage === '/' ? Classes.navActive : ''}>
+                        <a href="/" onClick={handleHomeClick}><h5>Home</h5></a>
+                    </li>
+                    <li onClick={() => handleScrollOrNavigate('about-section', -120)}>
+                        <h5>About</h5>
+                    </li>
+                    <li onClick={() => handleScrollOrNavigate('services-section', -30)}>
+                        <h5>Skills</h5>
+                    </li>
+                    <li onClick={() => handleScrollOrNavigate('reviews-section', -50)}>
+                        <h5>Projects</h5>
+                    </li>
+                    <li onClick={() => handleScrollOrNavigate('faq-section', 0)}>
+                        <h5>Contact</h5>
+                    </li>
+                </ul>
+            )}
             <div className={Classes.gridRight}>
-                {/* <a
-                    href="https://cal.com/evolvion/30min"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                > */}
-                <button className={Classes.quoteBtn} onClick={() => handleNavigate('/contact-us')}>
-                    <h5> {isMobile ? 'Quote' : `Get a quote`} </h5>
-                </button>
-                {/* </a> */}
+                {!isCompactNav ? (
+                    <a href="mailto:keerthudarshu06@gmail.com">
+                        <button className={Classes.quoteBtn}>
+                            <h5>{isMobile ? 'Hire' : 'Hire Me'}</h5>
+                        </button>
+                    </a>
+                ) : (
+                    <button
+                        type="button"
+                        className={Classes.menuToggle}
+                        onClick={() => setMenuOpen((open) => !open)}
+                        aria-label="Toggle navigation menu"
+                        aria-expanded={menuOpen}
+                    >
+                        <span />
+                        <span />
+                        <span />
+                    </button>
+                )}
             </div>
+            {isCompactNav && menuOpen && (
+                <motion.div
+                    className={Classes.mobileMenu}
+                    initial={{ opacity: 0, y: -8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.2 }}
+                >
+                    <button type="button" onClick={handleHomeRoute} className={Classes.mobileMenuItem}>
+                        <h5>Home</h5>
+                    </button>
+                    <button type="button" onClick={() => handleScrollOrNavigate('about-section', -120)} className={Classes.mobileMenuItem}>
+                        <h5>About</h5>
+                    </button>
+                    <button type="button" onClick={() => handleScrollOrNavigate('services-section', -30)} className={Classes.mobileMenuItem}>
+                        <h5>Skills</h5>
+                    </button>
+                    <button type="button" onClick={() => handleScrollOrNavigate('reviews-section', -50)} className={Classes.mobileMenuItem}>
+                        <h5>Projects</h5>
+                    </button>
+                    <button type="button" onClick={() => handleScrollOrNavigate('faq-section', 0)} className={Classes.mobileMenuItem}>
+                        <h5>Contact</h5>
+                    </button>
+                    <a href="mailto:keerthudarshu06@gmail.com" className={Classes.mobileMenuCta} onClick={() => setMenuOpen(false)}>
+                        <h5>Hire Me</h5>
+                    </a>
+                </motion.div>
+            )}
         </motion.div>
     );
 }

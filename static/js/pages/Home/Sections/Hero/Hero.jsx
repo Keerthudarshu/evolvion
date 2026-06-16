@@ -1,15 +1,15 @@
 import React from 'react'
 import Classes from './Hero.module.css'
-import Heading from './comp/Heading'
-import SubHeading from './comp/SubHeading'
-import BottomToTop from '../../../../Animations/BottomToTop'
+import Heading from './comp/Heading.jsx'
+import SubHeading from './comp/SubHeading.jsx'
+import BottomToTop from '../../../../Animations/BottomToTop.jsx'
 import { useNavigate } from 'react-router-dom'
 // import BgScene from './comp/BgScene'
-import Toolbar from './comp/Toolbar'
+import Toolbar from './comp/Toolbar.jsx'
 // import { StarBorder } from '@mui/icons-material'
 import { motion } from 'framer-motion';
-import AvatarsGroup from './comp/AvatarsGroup'
-import ProjectsLoop from './comp/ProjectsLoop/ProjectsLoop'
+import AvatarsGroup from './comp/AvatarsGroup.jsx'
+import ProjectsLoop from './comp/ProjectsLoop/ProjectsLoop.jsx'
 
 export default function Hero() {
     const navigateTo = useNavigate();
@@ -24,6 +24,16 @@ export default function Hero() {
                     <BottomToTop fromY={60} delay={0} duration={0.35}>
                         <Toolbar />
                     </BottomToTop>
+                    <BottomToTop fromY={50} delay={0.05} duration={0.35}>
+                        <div className={Classes.portraitFrame}>
+                            <img
+                                src="/images/keerthan.jpeg"
+                                alt="Keerthan V portrait"
+                                className={Classes.portraitImage}
+                                draggable={false}
+                            />
+                        </div>
+                    </BottomToTop>
                     <BottomToTop fromY={60} delay={0.1} duration={0.35}>
                         <Heading />
                     </BottomToTop>
@@ -33,6 +43,9 @@ export default function Hero() {
                     <BottomToTop fromY={40} delay={0.2} duration={0.35}>
                         <div className={Classes.buttons} >
                             <button type='button' className={Classes.btn1} onClick={() => { redirectTo('/portfolio') }} > <h5>View our portfolio</h5> </button>
+                            <a href="/resume.pdf" download="Keerthan_V_Resume.pdf">
+                                <button type='button' className={Classes.btn3}> <h5>Download Resume</h5> </button>
+                            </a>
                             <a
                                 href="https://cal.com/evolvion/30min"
                                 target="_blank"

@@ -1,229 +1,141 @@
 import React, { useState } from "react";
 import Classes from "./Reviews.module.css";
 import SpotlightCard from "../../../../components/Navbar/reactbits/Components/SpotlightCard/SpotlightCard";
-
-// Import AnimatePresence & motion
 import { AnimatePresence, motion } from "framer-motion";
-// import RoughText from "../../../../components/RoughText/RoughText";
+
+const PROJECTS = [
+    {
+        name: "Mane Coffee",
+        type: "E-commerce Brand Website",
+        tech: ["React.js", "Spring Boot", "MySQL", "AWS"],
+        description: "Full-stack e-commerce platform for a coffee brand. Built responsive frontend with React.js, REST APIs with Spring Boot, MySQL for product/cart/order management. Deployed backend on AWS EC2 and frontend on Vercel.",
+        link: "https://manecoffeee.com/",
+        icon: "☕",
+    },
+    {
+        name: "Emirates Gold",
+        type: "Jewellery Business Website",
+        tech: ["PHP", "MySQL", "HTML", "CSS"],
+        description: "Dynamic jewellery business website using PHP and MySQL. Designed responsive frontend pages and implemented backend functionalities with database integration. Deployed on InfinityFree hosting.",
+        link: "https://emirate.page.gd/",
+        icon: "💎",
+    },
+    {
+        name: "Sanatana Parampara",
+        type: "E-commerce Platform",
+        tech: ["React.js", "Spring Boot", "AWS"],
+        description: "Scalable e-commerce platform with reusable React.js frontend components and Spring Boot backend APIs. Deployed on AWS cloud infrastructure with focus on scalability and performance.",
+        link: null,
+        icon: "🛍️",
+    },
+    {
+        name: "PetAndCo",
+        type: "Pet Shop E-commerce",
+        tech: ["React.js", "Spring Boot", "MySQL"],
+        description: "Complete e-commerce system with cart and order management for a pet shop. Integrated Spring Boot backend with MySQL database and hosted application on AWS infrastructure.",
+        link: null,
+        icon: "🐾",
+    },
+    {
+        name: "Huura",
+        type: "Karate Academy Website",
+        tech: ["HTML", "CSS", "JavaScript"],
+        description: "Responsive static website for a karate academy optimized for desktop and mobile devices. Clean UI with smooth animations deployed on Vercel hosting platform.",
+        link: "https://karate-academy-two.vercel.app/",
+        icon: "🥋",
+    },
+];
+
+const ITEMS_PER_SLIDE = 3;
+const totalSlides = Math.ceil(PROJECTS.length / ITEMS_PER_SLIDE);
 
 export default function Reviews() {
-    // Example review data
-    const reviewsData = [
-        {
-            name: "SSP Technologies",
-            company: "CCTV & Security Systems",
-            avatar: "/images/jake.webp",
-            bg: "/images/reviewbg2.png",
-            review:
-                <div>
-                    Virtuososys delivered our security systems website with exceptional attention to detail.
-                    The team understood our industry perfectly and built a platform that truly represents our brand.
-                </div>
-        },
-        {
-            name: "Hello Colours",
-            company: "Painting Agency",
-            avatar: "/images/mcclain.webp",
-            bg: "/images/reviewbg3.png",
-            review:
-                <div>
-                    The team at Virtuososys built our painting agency website beautifully. They were responsive,
-                    creative, and delivered exactly what we envisioned — on time and within budget.
-                </div>,
-        },
-        {
-            name: "Moira Building",
-            company: "Hospital Website",
-            avatar: "/images/ari.png",
-            bg: "/images/reviewbg3.png",
-            review:
-                <div>
-                    Working with Virtuososys for our hospital website has been outstanding. Professional team,
-                    premium code quality, and a smooth delivery process from start to finish.
-                </div>,
-        },
-        {
-            name: "Lovely Cocada",
-            company: "UPVC Product Manufacturing",
-            avatar: "/images/dimitris.webp",
-            bg: "/images/reviewbg3.png",
-            review:
-                <div>
-                    Virtuososys built us a world-class product website at very competitive rates. Operating from
-                    India, they brought global quality standards to our project with great results.
-                </div>,
-        },
-        {
-            name: "Evolt Training",
-            company: "Multi Fitness Academy & Gym",
-            avatar: "/images/parker.jpg",
-            bg: "/images/reviewbg3.png",
-            review:
-                <div>
-                    Our fitness academy website exceeded all expectations. The Virtuososys team customized
-                    every feature for our specific needs and delivered a fast, beautiful, scalable platform.
-                </div>,
-        },
-    ];
-
-    // 1) If there are exactly 3 reviews, duplicate them so we can loop
-    let displayedReviews = reviewsData;
-    if (reviewsData.length === 3) {
-        displayedReviews = [...reviewsData, ...reviewsData]; // total 6
-    }
-
-    // 2) 3 reviews per slide
-    const itemsPerSlide = 3;
-    const totalSlides = Math.ceil(displayedReviews.length / itemsPerSlide);
-
-    // 3) Current slide index [0 .. totalSlides - 1]
     const [currentSlide, setCurrentSlide] = useState(0);
 
-    // For standard "non-wrapping" behavior, we clamp slides between 0 and totalSlides - 1
-    const goToPrev = () => {
-        setCurrentSlide((prev) => Math.max(0, prev - 1));
-    };
+    const goToPrev = () => setCurrentSlide((p) => Math.max(0, p - 1));
+    const goToNext = () => setCurrentSlide((p) => Math.min(totalSlides - 1, p + 1));
 
-    const goToNext = () => {
-        setCurrentSlide((prev) => Math.min(totalSlides - 1, prev + 1));
-    };
-
-    // 4) Slice the 3 reviews for the current slide
-    const startIndex = currentSlide * itemsPerSlide;
-    const endIndex = startIndex + itemsPerSlide;
-    const currentItems = displayedReviews.slice(startIndex, endIndex);
-
-    // The per-card delay array: Card 1 = 0.05s, Card 2 = 0.15s, Card 3 = 0.2s
+    const startIdx = currentSlide * ITEMS_PER_SLIDE;
+    const currentItems = PROJECTS.slice(startIdx, startIdx + ITEMS_PER_SLIDE);
     const delayMap = [0.05, 0.15, 0.2];
 
-    // Determine if prev/next buttons should be disabled
-    const isPrevDisabled = currentSlide === 0;
-    const isNextDisabled = currentSlide === totalSlides - 1;
-
     return (
-        <section className={Classes.hero} id="reviews-section" >
+        <section className={Classes.hero} id="reviews-section">
             <div className={Classes.container}>
                 <h2>
-                    What Our <span> Happy Clients </span> Say
+                    Featured <span>Projects</span>
                 </h2>
                 <p>
-                    Our contented customers, who have experienced our exceptional quality and impeccable service, are a constant source of pride and motivation
+                    A selection of web applications I've built — from e-commerce platforms
+                    to business websites, using modern full-stack technologies
                 </p>
 
-                {/* Carousel area */}
                 <div className={Classes.carousel}>
-                    {/* AnimatePresence to handle enter/exit animations */}
                     <AnimatePresence mode="wait">
-                        {currentItems.map((review, idx) => {
-                            // Retrieve delay from our delayMap
-                            const delay = delayMap[idx] || 0.1;
-
-                            return (
-                                <motion.div
-                                    // Combine currentSlide + idx for a unique key
-                                    key={`${currentSlide}-${idx}`}
-                                    initial={{ y: -10, opacity: 0 }}
-                                    animate={{ y: 0, opacity: 1 }}
-                                    exit={{ y: 10, opacity: 0 }}
-                                    transition={{
-                                        delay,
-                                        duration: 0.3,
-                                    }}
-                                    style={{ display: "inline-block" }}
+                        {currentItems.map((project, idx) => (
+                            <motion.div
+                                key={`${currentSlide}-${idx}`}
+                                initial={{ y: -10, opacity: 0 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                exit={{ y: 10, opacity: 0 }}
+                                transition={{ delay: delayMap[idx] || 0.1, duration: 0.3 }}
+                                style={{ display: "inline-block" }}
+                            >
+                                <SpotlightCard
+                                    className="custom-spotlight-card"
+                                    spotlightColor="rgb(225, 187, 251, 0.2)"
                                 >
-                                    <SpotlightCard
-                                        className="custom-spotlight-card"
-                                        spotlightColor="rgb(225, 187, 251, 0.2)"
-                                    >
-                                        <div className={Classes.card}>
-                                            <div className={Classes.profile}>
-                                                <img
-                                                    src={review.avatar}
-                                                    alt={review.name}
-                                                    className={Classes.avatar}
-                                                    draggable={false}
-                                                />
-                                                <div>
-                                                    <h4>{review.name}</h4>
-                                                    <span>{review.company}</span>
-                                                </div>
-                                            </div>
-
-                                            <div className={Classes.quoteMark}>&#10077;</div>
-
-                                            <p className={Classes.reviewText}>{review.review} </p>
-                                            <div className={Classes.cardBottom}>
-                                                {/* <img src={review.bg} alt="card background" /> */}
+                                    <div className={Classes.card}>
+                                        <div className={Classes.profile}>
+                                            <div className={Classes.projectIcon}>{project.icon}</div>
+                                            <div>
+                                                <h4>{project.name}</h4>
+                                                <span>{project.type}</span>
                                             </div>
                                         </div>
-                                    </SpotlightCard>
-                                </motion.div>
-                            );
-                        })}
+
+                                        <div className={Classes.techTags}>
+                                            {project.tech.map((t) => (
+                                                <span key={t} className={Classes.techTag}>{t}</span>
+                                            ))}
+                                        </div>
+
+                                        <p className={Classes.reviewText}>{project.description}</p>
+
+                                        {project.link && (
+                                            <a
+                                                href={project.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className={Classes.projectLink}
+                                            >
+                                                View Live →
+                                            </a>
+                                        )}
+
+                                        <div className={Classes.cardBottom} />
+                                    </div>
+                                </SpotlightCard>
+                            </motion.div>
+                        ))}
                     </AnimatePresence>
                 </div>
 
-                {/* Navigation arrows */}
                 <div className={Classes.btnWrapper}>
-                    {/* Prev Button */}
-                    <button
-                        onClick={goToPrev}
-                        disabled={isPrevDisabled}
-                        style={{
-                            opacity: isPrevDisabled ? 0.5 : 1,
-                        }}
-                    >
-                        <svg
-                            style={{ transform: "rotate(180deg)" }}
-                            width="18"
-                            height="18"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                        >
-                            <path
-                                d="M5 12H19"
-                                stroke="#8F9BB7"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
-                            <path
-                                d="M12 5L19 12L12 19"
-                                stroke="#8F9BB7"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
+                    <button onClick={goToPrev} disabled={currentSlide === 0} style={{ opacity: currentSlide === 0 ? 0.5 : 1 }}>
+                        <svg style={{ transform: "rotate(180deg)" }} width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12H19" stroke="#8F9BB7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            <path d="M12 5L19 12L12 19" stroke="#8F9BB7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                     </button>
-
-                    {/* Next Button */}
-                    <button
-                        onClick={goToNext}
-                        disabled={isNextDisabled}
-                        style={{
-                            opacity: isNextDisabled ? 0.5 : 1,
-                        }}
-                    >
+                    <button onClick={goToNext} disabled={currentSlide === totalSlides - 1} style={{ opacity: currentSlide === totalSlides - 1 ? 0.5 : 1 }}>
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M5 12H19"
-                                stroke="#8F9BB7"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
-                            <path
-                                d="M12 5L19 12L12 19"
-                                stroke="#8F9BB7"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
+                            <path d="M5 12H19" stroke="#8F9BB7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            <path d="M12 5L19 12L12 19" stroke="#8F9BB7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                     </button>
                 </div>
             </div>
-        </section >
+        </section>
     );
 }

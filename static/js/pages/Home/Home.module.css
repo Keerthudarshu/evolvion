@@ -1,4 +1,4 @@
-// extracted by mini-css-extract-plugin
-export default {}
-
-;
+.pageWrapper {
+    background-color: #010915;
+    min-height: 100vh;
+}

@@ -1,38 +1,24 @@
-import React from 'react'
-import Classes from './Faq.module.css'
-// import RoughText from '../../../../components/RoughText/RoughText';
-// import UnicornEmbed from '../../../../utils/Unicorn/UnicornEmbed';
-import AccordionMUI from './AccordionMUI';
-// import { useNavigate } from 'react-router-dom';
+import React from 'react';
+import Classes from './Faq.module.css';
+import ContactCards from './AccordionMUI.jsx';
 
 export default function FAQ() {
-    // const scene = 'Ggdcljbxm4S0hpgogLbD'; //red
-    // const scene = 'wBd76fLeefXdT5b7smRe'; //blue
-    // const navigateTo = useNavigate();
-
     return (
-        <section className={Classes.hero} id='faq-section' >
+        <section className={Classes.hero} id="faq-section">
             <div className={Classes.container}>
                 <h2>
-                    Frequently Asked <span>Questions</span>
-                    {/* <button className={Classes.exploreBtn} onClick={() => { navigateTo('/contact-us') }} >
-                        <h5>Get in touch! {'->'}</h5>
-                    </button> */}
+                    Get In <span>Touch</span>
                 </h2>
-                {/* <p>
-                    With hundreds of websites completed, we bring a proven track record
-                    of developing websites and delivering exceptional solutions for
-                    clients across industries.
-                </p> */}
+                <p style={{ color: '#ccc', maxWidth: '550px', margin: '0.5rem auto 0', lineHeight: '1.6' }}>
+                    I'm open to full-time roles, freelance projects, and collaborations.
+                    Let's build something great together.
+                </p>
             </div>
-            <div className={Classes.grid} >
-                {/* <div className={Classes.sceneCon} >
-                    <UnicornEmbed projectId={scene} />
-                </div> */}
-                <div className={Classes.faqCon} >
-                    <AccordionMUI />
+            <div className={Classes.grid}>
+                <div className={Classes.faqCon} style={{ marginTop: '2rem' }}>
+                    <ContactCards />
                 </div>
             </div>
         </section>
-    )
+    );
 }

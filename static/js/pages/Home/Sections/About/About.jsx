@@ -1,100 +1,81 @@
 import React from 'react';
 import Classes from './About.module.css';
-// import TiltedCard from '../../../../components/Navbar/reactbits/Components/TiltedCard/TiltedCard';
-// import useScreenWidth from '../../../../Hooks/useScreenWidth';
-// import BottomToTop from '../../../../Animations/BottomToTop';
-// import RoughText from '../../../../components/RoughText/RoughText';
-import { useNavigate } from 'react-router-dom';
+
+const EXPERIENCE = [
+    {
+        role: 'Software Developer',
+        company: 'PJN Technologies, Bangalore',
+        period: 'Jun 2025 – Mar 2026',
+        points: [
+            'Built full stack apps using React.js and Spring Boot',
+            'Designed RESTful APIs; managed MySQL & PostgreSQL',
+            'Responsive UI with cross-browser compatibility',
+            'Testing, debugging, deployment & maintenance',
+        ],
+    },
+    {
+        role: 'Java Developer Intern',
+        company: 'SNYCE Automations Pvt Ltd',
+        period: 'Mar 2025 – Jun 2025',
+        points: [
+            'Backend services with Spring Boot for Work Permit System',
+            'Integrated React frontend with backend APIs',
+            'API testing, debugging & workflow optimization',
+        ],
+    },
+    {
+        role: 'QA Intern Trainee',
+        company: 'Thought Frameworks',
+        period: 'Apr 2025 – May 2025',
+        points: [
+            'Manual & functional testing for AI-based applications',
+            'Created test cases; collaborated to resolve defects',
+        ],
+    },
+];
 
 export default function About() {
-
-    // const screenWidth = useScreenWidth();
-    // const isMobile = screenWidth <= 768;
-
-    const navigateTo = useNavigate();
-
     return (
-        <section className={Classes.about} id='about-section' >
+        <section className={Classes.about} id="about-section">
             <div className={Classes.container}>
                 <h2>
-                    Your 360° <span> IT Solutions </span> Partner
+                    About <span>Me</span>
                 </h2>
                 <p>
-                    With 100+ projects delivered across industries, we offer world-class web development, <br />
-                    software testing, mobile apps and AI solutions at the most competitive rates
+                    Full Stack Developer with 1+ year of experience in React.js, Next.js,
+                    Java Spring Boot, and PHP — building scalable, responsive, cloud-deployed web applications
                 </p>
             </div>
 
-            {/* Middle/Features Section */}
             <div className={Classes.featuresSection}>
-
                 <div className={Classes.projects}>
-                    {/* {!isMobile ?
-                        <TiltedCard
-                            imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
-                            altText="Kendrick Lamar - GNX Album Cover"
-                            captionText="Kendrick Lamar - GNX"
-                            containerHeight="100%"
-                            containerWidth="100%"
-                            imageHeight="100%"
-                            imageWidth="100%"
-                            rotateAmplitude={10}
-                            scaleOnHover={1.02}
-                            showMobileWarning={false}
-                            showTooltip={false}
-                            displayOverlayContent={true}
-                            overlayContent={
-                                <>
-                                    <img src={'/images/project.png'} alt='projects background' draggable={false} className={Classes.card_inner_img} />
-                                    <div className={Classes.projectsInner} >
-                                        <h2>200+ Projects <br /> Launched</h2>
-                                        <p>
-                                            With over 200 successful projects, we bring experience,
-                                            creativity, and reliability to every new website.
-                                        </p>
-                                        <button onClick={() => { navigateTo('/contact-us') }} > <h5>Get started now</h5> </button>
-                                    </div>
-                                </>
-                            }
-                        />
-                        :
-                        <> */}
-                    <img src={'/images/project.png'} alt='projects background for mobile' draggable={false} className={Classes.card_inner_img} />
-                    <div className={Classes.projectsInner} >
-                        <h2>100+ Projects Launched</h2>
+                    <img src="/images/project.png" alt="about background" draggable={false} className={Classes.card_inner_img} />
+                    <div className={Classes.projectsInner}>
+                        <h2>1+ Year<br />of Experience</h2>
                         <p>
-                            From startups to enterprises — we build web apps, mobile apps, automation and integration solutions tailored to your business needs.
+                            B.E. in Computer Science, K V G College of Engineering (CGPA 8.1/10).
+                            Certified in Full Stack Web Development & C Programming.
                         </p>
-                        <a href="https://virtuososys.co/" target="_blank" rel="noopener noreferrer">
-                            <button> <h5>View our work</h5> </button>
+                        <a href="mailto:keerthudarshu06@gmail.com">
+                            <button><h5>Hire Me</h5></button>
                         </a>
                     </div>
-                    {/* </>
-                    } */}
                 </div>
 
                 <div className={Classes.featuresList}>
-                    <div className={Classes.featureBox}>
-                        <h3>Web & Mobile Development</h3>
-                        <p>
-                            We build complete web applications and mobile apps using ReactJS, Node.js,
-                            Next.js, Flutter and more — crafted for performance and scalability.
-                        </p>
-                    </div>
-                    <div className={`${Classes.featureBox}`}>
-                        <h3>Software Testing & QA</h3>
-                        <p>
-                            Our dedicated QA teams perform quality verification across e-commerce,
-                            healthcare, media and business solutions to the highest standards.
-                        </p>
-                    </div>
-                    <div className={Classes.featureBox}>
-                        <h3>Competitive Pricing</h3>
-                        <p>
-                            Operating from India, we offer world-class development at rates that
-                            fit your budget — without compromising on code quality or delivery.
-                        </p>
-                    </div>
+                    {EXPERIENCE.map((exp, i) => (
+                        <div key={i} className={Classes.featureBox}>
+                            <h3>{exp.role}</h3>
+                            <p style={{ color: '#a365ff', marginBottom: '0.5rem', fontSize: '13px', fontWeight: '500' }}>
+                                {exp.company} · {exp.period}
+                            </p>
+                            <ul style={{ paddingLeft: '1rem', listStyle: 'disc' }}>
+                                {exp.points.map((pt, j) => (
+                                    <li key={j} style={{ fontSize: '13px', fontWeight: '300', color: '#ccc', marginBottom: '3px' }}>{pt}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>
